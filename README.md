@@ -2,3 +2,12 @@
 # week1-assignment
 
 - XMLHttpRequest araştırılacak ve jsonplaceholder kullanılarak içerisindeki userlar console’a yazdırılacak.
+
+
+- Clone this repo.
+
+```
+$ cd week1-assignment-RamazanUstuntas
+$ npm install
+$ npm start
+```
