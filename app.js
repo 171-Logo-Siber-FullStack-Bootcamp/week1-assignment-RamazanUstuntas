@@ -17,11 +17,16 @@ var dataReq = new XMLHttpRequest();
 // we should prefer the "load" event. Because the data on the fully-loaded-page will return as an response.
 // Also, you can use dataReq.onload = function () {...}
 dataReq.addEventListener("load", function (){
-   console.log(this.responseText);
+  if(dataReq.readyState==4 && dataReq.status==200){
+    console.log(JSON.parse(dataReq.responseText));
+  }
 });
+//defining response type as JSON
+dataReq.responseType = 'JSON';
 
 // to open the url where we will send a request
 dataReq.open("GET", "https://jsonplaceholder.typicode.com/users");
+
 // to send the request
 dataReq.send();
 
